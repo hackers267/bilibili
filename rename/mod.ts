@@ -23,7 +23,6 @@ const structure = fileContainer.filter(({ name }) => isInfo(name) || isVideo(nam
       const info = getInfo(curPath, nextPath);
         const video = new Video(curPath,type);
         const file = video.getPath(curPath,nextPath);
-        console.log('file',file)
       return [...acc, { info, video: file}];
     }
     return [...acc];
